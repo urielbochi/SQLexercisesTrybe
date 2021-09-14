@@ -24,6 +24,22 @@ SELECT Name, Code from projects WHERE Name NOT LIKE 'A%';
 # Escreva uma query para exibir o nome de todos os projetos cujo código contenha a letra H .
 SELECT Name, Code from projects WHERE Code Like '%H%';
 
+SELECT Name from projects WHERE Name REGEXP '[A]'; #Começa em A;
+SELECT Name from projects WHERE Name REGEXP '^[AB]'; #Começa com 'A' ou 'B'
+SELECT Name from projects WHERE Name REGEXP '^[^AB]'; #Não começa com 'A e nem 'B'
+SELECT Name from projects WHERE Name REGEXP '^[ZD]|JU'; #Começa com Z ou D ou JU
+SELECT Name from projects WHERE Name REGEXP '^[aeiou]'; #Filtra linhas que começam com vogal
+SELECT Name from projects WHERE Name REGEXP '[aeiou]$'; #Filtra linhas que terminam com vogal
+SELECT DISTINCT Name FROM projects WHERE Name REGEXP '^[^aeiou]'; #Filtra todos menos aeiou
+                                                                      #no inicio da frase
+
+
+
+
+
+
+
+
 
 
 
